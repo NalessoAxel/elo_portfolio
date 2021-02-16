@@ -249,7 +249,6 @@ section.header {
 	width: 100%;
 	display: flex;
 	justify-content:space-between;
-	align-items: center;
 	flex-direction: row;
 }
 .timeline-experiences {
@@ -274,6 +273,75 @@ section.header {
 	padding-bottom: 10px;
 	font-size: 18px;
 }
+
+
+/* EXTRA */
+
+.container-extra {
+	min-height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.extra {
+	/* display: flex; */
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	/* max-width: 800px; */
+	margin: 0 auto;
+	position: relative;
+}
+.extra ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	
+	
+
+}
+.extra ul li {
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	background-color: #FFEDCC;
+	border: 1px solid #e6d4b3;
+	display: flex;
+	
+	
+}
+.extra-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	
+}
+
+.extra-content h3 {
+	font-size: 34px;
+	font-weight: 500;
+	line-height: 28px;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+}
+.extra-content p {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+}
+.extra-content .date {
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+
+}
+/* MEDIA QUERY */
+
 @media only screen and (min-width: 768px) {
 	.container-formations {
 		flex-direction: row;
@@ -334,11 +402,13 @@ section.header {
 		font-size: 50px;
 		font-family: 'Gentium Book Basic', serif;
 		white-space: nowrap;
+		
 	}
 	.timeline-content .date {
 		position: absolute;
 		top: -20px;
 	}
+
 	/* EXP */
 
 	.timeline-experiences::before {
@@ -392,16 +462,46 @@ section.header {
 		height: auto;
 		padding: 30px;
 		display: flex;
-		flex-direction: row;
-		margin: 0px 100px;
+		margin-top: 200px;
+		/* margin: 0px 100px; */
 		font-size: 50px;
 		font-family: 'Gentium Book Basic', serif;
 		white-space: nowrap;
+		top:0;
+		position: relative;
 	}
 	.timeline-content .date {
 		position: absolute;
 		top: -20px;
 	}
+	/* EXTRA */
+
+	.container-extra {
+		/* display: flex;
+		flex-direction: column; */
+		height: 100vh;
+		width: 100%;
+		
+	}
+	.extra {
+		/* display: flex;
+		flex-direction: row; */
+		
+		height: auto;
+		width: 100%;
+	}
+	
+	.extra-content ul li {
+		width: 100%;
+		height: auto;
+		margin-bottom: 50px;
+		position: relative;
+		/* display: flex;
+		flex-direction: row;
+		justify-content: space-between;  */
+	}
+	
+	
 }
 
 /* DL CV */
@@ -414,7 +514,7 @@ section.header {
 .first-btn
 {
   background-color:#FFEDCC;
-  padding:20px 40px;
+  padding:0 40px;
   border:0px;
   color:#000;
   font-family: 'BenchNine', Arial, sans-serif;
