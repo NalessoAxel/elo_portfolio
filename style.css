@@ -421,6 +421,7 @@ section.header {
   font-size:44px;
   margin:40px 40px;
   position:relative;
+  outline: none;
 
   
 }
