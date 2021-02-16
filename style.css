@@ -84,9 +84,9 @@ section.header {
 }
 .nav-btn i {
 	display: block;
-	margin-top: 20px;
-	margin-left: 5px;
+	
 	transform: rotate(90deg);
+	
 	cursor: pointer;
 
 
@@ -95,8 +95,7 @@ section.header {
 	transform: rotate(180deg);
 	transition: 1s;
 	display: block;
-	margin-top: 20px;
-	margin-left: 5px;
+	
 }
 
 /* HOME */
