@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="/base.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./style.css">
 
     <title>Elodie Simons || Communication</title>
 </head>
@@ -25,37 +25,39 @@
                 </div>
             </nav>
             <div class="media-container">
-            <span onclick="openNav()"><i class="fas fa-ellipsis-h fa-3x"></i></span>
+            <span class="nav-btn" onclick="openNav()"><i class="fas fa-ellipsis-h fa-3x"></i></span>
 
-            <a href="https://www.linkedin.com/in/elodie-simons-b57179ab/" target="_blank"><i
-                    class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/elodie-simons-b57179ab/" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i></a>
             </div>
-
-            <div class="container-acceuil">
+        </section>
+            <section class="acceuil">
+            
                 <div class="container-left">
                     <div class="title">
                         <h1></h1>
                     </div>
 
                 </div>
+            
                 <div class="container-layout">
                     <div class="split-layout__rule">
                     </div>
                 </div>
                 <div class="container-right">
-                    <img src="/assets/Elo_profil.svg" alt="profil picture">
+                    <img src="./assets/Elo_profil.svg" alt="profil picture">
                 </div>
-            </div>
+           
         </section>
         <section class="hero-about" id="about">
 
             <div class="title-container">
                 <div class="split-layout__about">
-                    <h2 class="title-about">| Qui suis-je? | </h2>
+                    <h2 class="title-about" data-anim="1">| Qui suis-je? | </h2>
                 </div>
 
             </div>
-
+        
             <div class="text-content">
                 <p class="custom-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae, voluptas
                     vel cumque
@@ -121,7 +123,7 @@
                 <div class="round5"></div>
             </div>
             <div class="title-experiences">
-                <h2 class="experiences">| Experiences|</h2>
+                <h2 class="experiences" data-anim="3">| Experiences|</h2>
             </div>
             <div class="box-timeline2">
                 <div class="ligne3"></div>
@@ -134,7 +136,7 @@
 
 
                 <div class="box b bm1" data-anim="4">
-                    <h3>Chargée de communication pour l'asbl Be.Face </h3>
+                    <h3>Chargée de communication Asbl Be.Face </h3>
                     <p class="date">2019 - 2021</p>
                         <p class="liexp">Mise à jour des réseaux sociaux(Facebook + Linkedin + instagram).</p>
                         <p class="liexp">Mise en place de campagnes de pub pour le programme Bright future.</p>
@@ -145,7 +147,7 @@
 
                 </div>
                 <div class="box b bm2" data-anim="5">
-                    <h3>Chargée de communication pour le collectif 1jour 1salon </h3>
+                    <h3>Chargée de communication collectif 1jour 1salon </h3>
                     <p class="date">12/2018 - 02/2019</p>
                         <p class="liexp">Mise en place du plan de communication.</p>
                         <p class="liexp">Elaboration du dossier de presse avec le collectif.</p>
@@ -165,7 +167,7 @@
                   
                 </div>
                 <div class="box b bm4" data-anim="7">
-                    <h3>Assistante styliste pour Marine Gabaut (Bellerose)</h3>
+                    <h3>Assistante styliste Marine Gabaut (Bellerose)</h3>
                     <p class="date">06/2018 - 07/2018</p>
                         <p class="liexp">Enregistrement des articles shootés dans la base de données.</p>
                         <p class="liexp">Préparations des tenues avant le début du shooting.</p>
@@ -175,7 +177,7 @@
                     
                 </div>
                 <div class="box b bm5" data-anim="8">
-                    <h3>Journaliste stagiaire pour LE Vif/Weekend </h3>
+                    <h3>Journaliste stagiaire LE Vif/Weekend </h3>
                     <p class="date">03/2017 - 04/2017</p>
                         <p class="liexp">Mise à jour des réseaux sociaux(Facebook + Linkedin + instagram).</p>
                         <p class="liexp">Mise en place de campagnes de pub pour le programme Bright future.</p>
@@ -238,7 +240,12 @@
                 <p class="quality">Résisante au stress</p>
                 <p class="quality">Ouverte d'esprit</p>
                 <p class="quality">Volontaire</p>       
-    </div>    
+    </div>
+    <div class="resume">  
+    <a href="/assets/CV-Elodie-Simons.pdf" download>
+        <button class="first-btn">Telecharger mon CV</button>
+    </a>
+</div>  
     </section>
 
     </main>
@@ -246,11 +253,11 @@
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
-    <script src="/js/index.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="/js/typewriter.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/typewriter.js"></script>
 
 </body>
 
