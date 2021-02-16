@@ -170,20 +170,19 @@ section.header {
 }
 
 
-.about-infos {
-	display: flex;
-	padding: 0 15px;
+.about-infos {	
+	padding: 0 5px;
 
 }
 
 .list-about {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 22px;
+	font-size: 32px;
 	line-height: 24px;
 	list-style: none;
 }
@@ -255,7 +254,7 @@ section.header {
 	width: 80%;
 	height: auto;
 	max-width: 800px;
-	margin: 80px auto;
+	margin: 50px  auto 0 auto;
 	position: relative;
 }
 .timeline-experiences ul {
