@@ -1,3 +1,21 @@
+
+gsap.registerPlugin(ScrollTrigger)
+
+// const locoScroll = new LocomotiveScroll({
+//     el: document.querySelector(".smooth-scroll"),
+//     smooth: true
+//   })
+//   locoScroll.on("scroll", ScrollTrigger.update)
+//   ScrollTrigger.scrollerProxy(".smooth-scroll", {
+//     scrollTop(value) {
+//       return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+//     },
+//     getBoundingClientRect() {
+//         return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+//       },
+//       pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+//     })
+
 function openNav() {
     document.getElementById('nav').style.width = "50%"
 }
@@ -30,19 +48,19 @@ allBoxes.forEach(box => {
 
 })
 
-gsap.from('.container-right', {
+;
+
+ gsap.from('.container-right', {
     opacity: 0, 
     duration: 1, 
     x: 300, 
     delay: 0.6, 
     stagger: 0.6 })
-
+    
 gsap.from('.split-layout__rule', {
     opacity: 0, 
     duration: 1, 
     y: -300})
-
-gsap.registerPlugin(ScrollTrigger)
 
 gsap.to(".title-about", {
     scrollTrigger:{
@@ -50,7 +68,7 @@ gsap.to(".title-about", {
         toggleActions: "restart none none none"
     },
     x:50,
-    duation: 1,
+    duation: 0.5,
     })
 
 
@@ -72,4 +90,5 @@ gsap.to(".experiences", {
     duation: 1,
     })
     
-     
+    // ScrollTrigger.addEventListener("refresh", () => locoScroll.update())
+    // ScrollTrigger.refresh()
