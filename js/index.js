@@ -1,20 +1,20 @@
 
 gsap.registerPlugin(ScrollTrigger)
 
-// const locoScroll = new LocomotiveScroll({
-//     el: document.querySelector(".smooth-scroll"),
-//     smooth: true
-//   })
-//   locoScroll.on("scroll", ScrollTrigger.update)
-//   ScrollTrigger.scrollerProxy(".smooth-scroll", {
-//     scrollTop(value) {
-//       return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-//     },
-//     getBoundingClientRect() {
-//         return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-//       },
-//       pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
-//     })
+const locoScroll = new LocomotiveScroll({
+    el: document.querySelector(".smooth-scroll"),
+    smooth: true
+  })
+  locoScroll.on("scroll", ScrollTrigger.update)
+  ScrollTrigger.scrollerProxy(".smooth-scroll", {
+    scrollTop(value) {
+      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+      },
+      pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+    })
 
 function openNav() {
     document.getElementById('nav').style.width = "50%"
@@ -48,7 +48,11 @@ allBoxes.forEach(box => {
 
 })
 
-;
+gsap.from('.timeline-experiences',{
+    opacity: 0,
+    durattion: 1,
+    x: 100
+})
 
  gsap.from('.container-right', {
     opacity: 0, 
@@ -72,23 +76,23 @@ gsap.to(".title-about", {
     })
 
 
-gsap.to(".formation", {
+gsap.to(".title-formation", {
     scrollTrigger:{
-        trigger: ".formation",
+        trigger: ".title-formation",
         toggleActions: "restart none none none"
     },
-    x:-100,
+    x:-200,
     duation: 1
     })
    
-gsap.to(".experiences", {
+gsap.to(".title-experiences", {
     scrollTrigger:{
-        trigger: ".experiences",
+        trigger: ".title-experiences",
         toggleActions: "restart none none none"   
     },
-    x: 100,
-    duation: 1,
+    x: 200,
+    duation: 3,
     })
     
-    // ScrollTrigger.addEventListener("refresh", () => locoScroll.update())
-    // ScrollTrigger.refresh()
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update())
+    ScrollTrigger.refresh()

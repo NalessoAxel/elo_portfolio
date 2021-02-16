@@ -24,14 +24,14 @@ section.header {
 	top: 0;
 }
 .overlay {
-	height: 100%;
+	height: 100vh;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 100;
 	left: 0;
 	top: 0;
 	background-color: rgba(5, 5, 5, 0.9);
-	overflow-x: hidden;
+	overflow: hidden;
 	transition: 1s;
 }
 
@@ -39,7 +39,7 @@ section.header {
 	position: absolute;
 	top: 30%;
 	width: 100%;
-	height: 100vh;
+	/* height: 100vh; */
 	text-align: center;
 	font-size: 30px;
 }
