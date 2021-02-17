@@ -9,16 +9,13 @@
 }
 
 main {
-	padding: 0 40px;
+	padding: 0 30px;
 	background-color: #FFEDCC;
 	font-family: 'Gentium Book Basic', sans-serif;
 }
 
-h3 {
-	font-size: 20px;
-	margin-bottom: 10px;
-}
 /* MENU */
+
 section.header {
 	position: sticky;
 	top: 0;
@@ -170,25 +167,27 @@ section.header {
 }
 
 
-.about-infos {	
-	padding: 0 5px;
 
-}
 
 .list-about {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 32px;
 	line-height: 24px;
 	list-style: none;
+	padding: 10px 5px;
 }
 
 #about > div.about-infos > ul > li {
-	padding: 0 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* flex-wrap: wrap; */
+	padding: 10px 15px;
 	border-radius: 10px;
 	
 }
@@ -282,7 +281,7 @@ section.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 .extra {
 	/* display: flex; */
@@ -290,7 +289,7 @@ section.header {
 	justify-content: space-between;
 	width: 100%;
 	height: auto;
-	/* max-width: 800px; */
+	
 	margin: 0 auto;
 	position: relative;
 }
@@ -298,6 +297,7 @@ section.header {
 	list-style: none;
 	display: flex;
 	justify-content: space-around;
+	padding-top: 60px;
 	
 	
 
@@ -312,11 +312,17 @@ section.header {
 	
 	
 }
+.card {
+	position: relative;
+	display: flex;
+	
+}
 .extra-content {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: flex-start;
+	
 	
 }
 
@@ -342,6 +348,9 @@ section.header {
 /* MEDIA QUERY */
 
 @media only screen and (min-width: 768px) {
+	.list-about {
+		padding: 10px 5px;
+	}
 	.container-formations {
 		flex-direction: row;
 	}
@@ -394,10 +403,12 @@ section.header {
 	body > main > section:nth-child(4) > div.title-formation > h2 {
 		width: 50%;
 		height: auto;
-		padding: 30px;
+		padding-right: 100px;
+		padding-bottom: 100px;
 		display: flex;
 		flex-direction: row;
-		margin: 0px 100px;
+		margin-right: 130px;
+		/* margin: 0px 10px 0px 180px; */
 		font-size: 50px;
 		font-family: 'Gentium Book Basic', serif;
 		white-space: nowrap;
@@ -459,10 +470,9 @@ section.header {
 	body > main > section:nth-child(5) > div.title-experiences > h2 {
 		width: 50%;
 		height: auto;
-		padding: 30px;
+		padding: 30px 0 30px 0;
 		display: flex;
 		margin-top: 200px;
-		/* margin: 0px 100px; */
 		font-size: 50px;
 		font-family: 'Gentium Book Basic', serif;
 		white-space: nowrap;
@@ -476,15 +486,12 @@ section.header {
 	/* EXTRA */
 
 	.container-extra {
-		/* display: flex;
-		flex-direction: column; */
+		
 		height: 100vh;
 		width: 100%;
 		
 	}
 	.extra {
-		/* display: flex;
-		flex-direction: row; */
 		
 		height: auto;
 		width: 100%;
@@ -493,11 +500,9 @@ section.header {
 	.extra-content ul li {
 		width: 100%;
 		height: auto;
-		margin-bottom: 50px;
+		/* margin-bottom: 50px; */
 		position: relative;
-		/* display: flex;
-		flex-direction: row;
-		justify-content: space-between;  */
+		
 	}
 	
 	
@@ -512,49 +517,49 @@ section.header {
 }
 .first-btn
 {
-  background-color:#FFEDCC;
-  padding:0 40px;
-  border:0px;
-  color:#000;
-  font-family: 'BenchNine', Arial, sans-serif;
-  font-size:44px;
-  margin:40px 40px;
-  position:relative;
-  outline: none;
-
+    background-color:#FFEDCC;
+	padding: 30px;	
+    border:0px;
+    color:#000;
+    font-family: 'BenchNine', Arial, sans-serif;
+    font-size:44px;
+    margin:0 40px 40px 40px;
+    position:relative;
+    outline: none;
+  
   
 }
 .first-btn:before,
 .first-btn:after {
-  border-color: #ff5050;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-style: solid;
-  border-width: 0;
-  content:"";
-  height: 18px;
-  position: absolute;
-  width: 18px;
+    border-color: #ff5050;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-style: solid;
+    border-width: 0;
+    content:"";
+    height: 18px;
+    position: absolute;
+    width: 18px;
 }
 .first-btn:before {
-  border-left-width: 2px;
-  border-top-width: 2px;
-  left: -5px;
-  top: -5px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    left: -5px;
+    top: -5px;
 }
 
 .first-btn:after {
-  border-bottom-width: 2px;
-  border-right-width: 2px;
-  bottom: -5px;
-  right: -5px;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    bottom: -5px;
+    right: -5px;
 }
 .first-btn:hover:before,
 .first-btn:hover:after
 {
-  height:100%;
-  width:100%;
-  cursor: pointer;
+    height:100%;
+    width:100%;
+    cursor: pointer;
 }
 
 

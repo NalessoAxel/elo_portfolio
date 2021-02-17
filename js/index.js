@@ -1,4 +1,4 @@
-
+const card = document.querySelectorAll('.extra-content')
 gsap.registerPlugin(ScrollTrigger)
 
 const locoScroll = new LocomotiveScroll({
@@ -24,8 +24,8 @@ function closeNav() {
 }
 
 
-const allRounds = document.querySelectorAll('.round')
-const allBoxes = document.querySelectorAll('.box')
+const allRounds = document.querySelectorAll('.timeline ul li::after')
+const allBoxes = document.querySelectorAll('.timeline')
 
 const controller = new ScrollMagic.Controller()
 
@@ -81,7 +81,7 @@ gsap.to(".title-formation", {
         trigger: ".title-formation",
         toggleActions: "restart none none none"
     },
-    x:-200,
+    x: 150,
     duation: 1
     })
    
@@ -90,9 +90,18 @@ gsap.to(".title-experiences", {
         trigger: ".title-experiences",
         toggleActions: "restart none none none"   
     },
-    x: 200,
+    x: -150,
     duation: 3,
     })
     
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update())
     ScrollTrigger.refresh()
+
+    TweenMax.from('.card', 2,{
+        scrollTrigger:{
+            trigger: ".card",
+            toggleActions: "restart none none none"   
+        },
+        left: 400,
+        
+    })
