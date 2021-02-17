@@ -8,6 +8,7 @@
 
 }
 
+
 main {
 	padding: 0 30px;
 	background-color: #FFEDCC;
@@ -24,7 +25,7 @@ section.header {
 	height: 100vh;
 	width: 0;
 	position: fixed;
-	z-index: 100;
+	z-index: 1;
 	left: 0;
 	top: 0;
 	background-color: rgba(5, 5, 5, 0.9);
@@ -504,8 +505,53 @@ section.header {
 		position: relative;
 		
 	}
+	/* SWIPER PROJECT */
+
+	.card-container {
+		display: flex;
+		align-items: center;
+		min-height: 100vh;
+	}
+	.card-project {
+		position: relative;
+		background: #FFEDCC;
+		width: 400px;
+		height: 500px;
+		margin: 0 auto;
+		border: 1px solid #e6d4b3;
+
+	}
+	.card-project .content {
+		width: 400px;
+		padding: 30px;
+	
+	}
+	.card-project .slider-text {
+		position: relative;
+		width: 100%;
+		height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.swiper-container {
+		width: 600px;
+		min-height: 100vh;
+		padding: 100px;
+	  }
+	  .swiper-slide {
+		  color: wheat;
+		  background-color: #000;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+	  }
+
+
 	
 	
+	
+
 }
 
 /* DL CV */

@@ -1,52 +1,48 @@
+
 const card = document.querySelectorAll('.extra-content')
 gsap.registerPlugin(ScrollTrigger)
 
-const locoScroll = new LocomotiveScroll({
-    el: document.querySelector(".smooth-scroll"),
-    smooth: true
-  })
-  locoScroll.on("scroll", ScrollTrigger.update)
-  ScrollTrigger.scrollerProxy(".smooth-scroll", {
-    scrollTop(value) {
-      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-      },
-      pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
-    })
-
-function openNav() {
-    document.getElementById('nav').style.width = "50%"
-}
-function closeNav() {
-    document.getElementById('nav').style.width = "0%"
-}
+// const locoScroll = new LocomotiveScroll({
+//     el: document.querySelector(".smooth-scroll"),
+//     smooth: true
+//   })
+//   locoScroll.on("scroll", ScrollTrigger.update)
+//   ScrollTrigger.scrollerProxy(".smooth-scroll", {
+//     scrollTop(value) {
+//       return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+//     },
+//     getBoundingClientRect() {
+//         return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+//       },
+//       pinType: document.querySelector(".smooth-scroll").style.transform ? "transform" : "fixed"
+//     })
 
 
-const allRounds = document.querySelectorAll('.timeline ul li::after')
-const allBoxes = document.querySelectorAll('.timeline')
 
-const controller = new ScrollMagic.Controller()
 
-allBoxes.forEach(box => {
+// const allRounds = document.querySelectorAll('.timeline ul li::after')
+// const allBoxes = document.querySelectorAll('.timeline')
+
+// const controller = new ScrollMagic.Controller()
+
+// allBoxes.forEach(box => {
     
-    for(i = 0; i < allRounds.length; i++) {
-        if(allRounds[i].getAttribute('data-anim') === box.getAttribute('data-anim')) {
+//     for(i = 0; i < allRounds.length; i++) {
+//         if(allRounds[i].getAttribute('data-anim') === box.getAttribute('data-anim')) {
 
-            let tween = gsap.from(box, {y: -10, opacity: 0, duration: 0.5})
+//             let tween = gsap.from(box, {y: -10, opacity: 0, duration: 0.5})
 
-            let scene = new ScrollMagic.Scene({
-                triggerElement: allRounds[i],
-                reverse: false
-            })
-            .setTween(tween)
+//             let scene = new ScrollMagic.Scene({
+//                 triggerElement: allRounds[i],
+//                 reverse: false
+//             })
+//             .setTween(tween)
             
-            .addTo(controller)
-        }
-    }
+//             .addTo(controller)
+//         }
+//     }
 
-})
+// })
 
 gsap.from('.timeline-experiences',{
     opacity: 0,
@@ -94,8 +90,7 @@ gsap.to(".title-experiences", {
     duation: 3,
     })
     
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update())
-    ScrollTrigger.refresh()
+    
 
     TweenMax.from('.card', 2,{
         scrollTrigger:{
@@ -105,3 +100,38 @@ gsap.to(".title-experiences", {
         left: 400,
         
     })
+
+    
+    function openNav() {
+        document.getElementById('nav').style.width = "33%"
+    }
+    function closeNav() {
+        document.getElementById('nav').style.width = "0%"
+    }
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        effect: 'cube',
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+        
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        
+      })
+    // ScrollTrigger.addEventListener("refresh", () => locoScroll.update())
+    // ScrollTrigger.refresh()
