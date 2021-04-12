@@ -5,14 +5,27 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	
 
 }
 
+/* CURSOR */
+
+/* #cursor {
+	z-index: 1000;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background:rgba(15, 15, 15, 0.671);
+	border-radius: 50%;
+	
+} */
 
 main {
 	padding: 0 30px;
 	background-color: #FFEDCC;
 	font-family: 'Gentium Book Basic', sans-serif;
+	
 }
 
 /* MENU */
@@ -20,12 +33,13 @@ main {
 section.header {
 	position: sticky;
 	top: 0;
+	z-index: 100;
 }
 .overlay {
 	height: 100vh;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 100;
 	left: 0;
 	top: 0;
 	background-color: rgba(5, 5, 5, 0.9);
@@ -309,13 +323,15 @@ section.header {
 	margin-bottom: 20px;
 	background-color: #FFEDCC;
 	border: 1px solid #e6d4b3;
-	display: flex;
+	display: block;
+	border: none;
 	
 	
 }
 .card {
 	position: relative;
-	display: flex;
+	display: block;
+	border: none;
 	
 }
 .extra-content {
@@ -510,14 +526,17 @@ section.header {
 	.card-container {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		min-height: 100vh;
+		width: 100%;
+		
 	}
 	.card-project {
 		position: relative;
 		background: #FFEDCC;
-		width: 400px;
-		height: 500px;
-		margin: 0 auto;
+		width: 100%;
+		
+		/* margin: 0 auto; */
 		border: 1px solid #e6d4b3;
 
 	}
@@ -536,18 +555,31 @@ section.header {
 	}
 	.swiper-container {
 		width: 600px;
-		min-height: 100vh;
-		padding: 100px;
+		height: 600px;
+		/* padding: 100px; */
+		margin-top: 100px;
+		margin-bottom: 100px;
 	  }
 	  .swiper-slide {
+		  
 		  color: wheat;
-		  background-color: #000;
+		  background-color: #FFEDCC;
 		  display: flex;
 		  justify-content: center;
 		  align-items: center;
+		  padding-bottom: 50px;
 	  }
+	  .button {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
 
-
+	  }
+	  .slider-text img {
+		  width: 100%;
+		  height: auto;
+	  }
+	  
 	
 	
 	

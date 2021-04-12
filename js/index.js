@@ -1,3 +1,10 @@
+const cursor = document.querySelector('#cursor')
+
+document.addEventListener('mousemove', e => {
+    cursor.style.top = `${e.pageY - 30}px`
+    cursor.style.left = `${e.pageX - 30}px`
+})
+
 
 const card = document.querySelectorAll('.extra-content')
 gsap.registerPlugin(ScrollTrigger)
@@ -92,14 +99,7 @@ gsap.to(".title-experiences", {
     
     
 
-    TweenMax.from('.card', 2,{
-        scrollTrigger:{
-            trigger: ".card",
-            toggleActions: "restart none none none"   
-        },
-        left: 400,
-        
-    })
+   
 
     
     function openNav() {
@@ -111,11 +111,11 @@ gsap.to(".title-experiences", {
     const swiper = new Swiper('.swiper-container', {
         loop: true,
         effect: 'cube',
-      grabCursor: true,
+      
       cubeEffect: {
         shadow: true,
         slideShadows: true,
-        shadowOffset: 20,
+        shadowOffset: 10,
         shadowScale: 0.94,
       },
         
@@ -125,11 +125,7 @@ gsap.to(".title-experiences", {
           el: '.swiper-pagination',
         },
       
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+        
       
         
       })
